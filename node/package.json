@@ -20,7 +20,7 @@
     "build": "node-gyp build",
     "tsc": "tsc -b",
     "clean": "rimraf dist build prebuilds",
-    "test": "electron-mocha --recursive dist/test --require source-map-support/register",
+    "test": "DISPLAY=:0 electron-mocha --recursive dist/test --require source-map-support/register",
     "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
     "format": "p() { prettier ${@:- --write} '**/*.{css,js,json,md,scss,ts,tsx}'; }; p"
   },
